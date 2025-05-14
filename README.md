@@ -48,8 +48,10 @@ This will run the application using `nodemon` for automatic restarting during de
 - User authentication and session management
 - Dynamic content rendering with EJS, Pug, and Handlebars
 - Database interaction using Mongoose and MongoDB
-- RESTful API design
 - MVC architecture
+- CSRF protection
+- Flash messages for error handling
+- Email notifications using Nodemailer
 
 ## Dependencies
 
@@ -61,7 +63,29 @@ This will run the application using `nodemon` for automatic restarting during de
 - `cookie-parser`: Parse cookies
 - `ejs`, `pug`, `express-handlebars`: Template engines
 - `mysql2`, `sequelize`: MySQL database interaction
+- `nodemailer`: Email sending
+- `connect-flash`: Flash message middleware
+- `csurf`: CSRF protection middleware
+
+## Environment Variables
+
+Create a `.env` file in the root directory and declare the following environment variables:
+
+- `MONGODB_URI`: The connection string for your MongoDB database.
+- `PASSWORD`: The password for email authentication.
+- `EMAIL`: The email address used for sending notifications.
 
 ## License
 
 This project is licensed under the ISC License.
+
+## Dependencies
+
+- `express`: Web framework for Node.js
+- `mongoose`: ODM for MongoDB
+- `body-parser`: Middleware for parsing request bodies
+- `express-session`: Session management
+- `connect-mongodb-session`: MongoDB session store for Express
+- `cookie-parser`: Parse cookies
+- `ejs`, `pug`, `express-handlebars`: Template engines
+- `mysql2`, `sequelize`: MySQL database interaction
