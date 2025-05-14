@@ -46,9 +46,9 @@ exports.postLogin = (req, res, next) => {
 };
 
 exports.postLogout = (req, res, next) => {
-    req.session.destroy(() => {
-      res.redirect('/');
-    });
+  req.session.destroy(() => {
+    res.redirect('/');
+  });
 };
 
 exports.getSignup = (req, res, next) => {
