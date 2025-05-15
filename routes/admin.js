@@ -26,10 +26,7 @@ router.post('/add-product',
         body('description')
             .isLength({min: 5})
             .trim()
-            .withMessage('Description must be at least 5 characters long'),
-        body('imageUrl')
-            .isURL()
-            .withMessage('Image URL must be a valid URL')
+            .withMessage('Description must be at least 5 characters long')
     ],
     isAuth,
     adminController.postAddProduct);
@@ -45,10 +42,7 @@ router.post('/edit-product',
         body('description')
             .isLength({min: 5})
             .trim()
-            .withMessage('Description must be at least 5 characters long'),
-        body('imageUrl')
-            .isURL()
-            .withMessage('Image URL must be a valid URL')
+            .withMessage('Description must be at least 5 characters long')
     ],
     isAuth, adminController.postEditProduct);
 router.post('/delete-product', isAuth, adminController.postDeleteProduct);
