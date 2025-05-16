@@ -16,9 +16,7 @@ router.get('/edit-product/:productId', isAuth, adminController.getEditProduct);
 router.post('/add-product',
     [
         body('title')
-            .isAlphanumeric()
             .isLength({min: 5})
-            .trim()
             .withMessage('Title must be at least 5 characters long'),
         body('price')
             .isFloat()
